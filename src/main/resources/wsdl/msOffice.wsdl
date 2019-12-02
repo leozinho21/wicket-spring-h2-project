@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://localhost:9090/ws/ms-office-details" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://localhost:9090/ws/ms-office-details" targetNamespace="http://localhost:9090/ws/ms-office-details">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://localhost:9090/ws/ms-office-details">
+
+    <xs:element name="getMsofficeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="code" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMsofficeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="msoffice" type="tns:msoffice"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="msoffice">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="imgUrl" type="xs:string"/>
+            <xs:element name="moreUrl" type="xs:string"/>
+            <xs:element name="price" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getMsofficeResponse">
+    <wsdl:part element="tns:getMsofficeResponse" name="getMsofficeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMsofficeRequest">
+    <wsdl:part element="tns:getMsofficeRequest" name="getMsofficeRequest">
+    </wsdl:part>
+  </wsdl:message>
+</wsdl:definitions>

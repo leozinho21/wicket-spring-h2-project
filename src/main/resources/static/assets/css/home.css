@@ -1,0 +1,26 @@
+.categories > button{
+	display: block;
+	min-width: 150px;
+	text-align: left;
+	margin: 4px 0;
+}
+.categories {
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
+	vertical-align: top;
+}
+.category{
+	display:inline-block;
+	padding: 10px;
+	min-height: 200px;
+}
+
+.logout-link{
+	display: block;
+	float: right;
+	padding:10px;
+}
+.list-group-item form{
+	    display: inline-block;
+}
